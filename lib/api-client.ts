@@ -38,6 +38,7 @@ export async function apiClient<T>(
   const response = await fetch(`${API_BASE_URL}${endpoint}`, {
     ...options,
     headers,
+    credentials: "include"
   });
 
   console.log(`[API] Response: ${response.status} ${response.statusText}`);
