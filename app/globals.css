@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-purple: #8B5CF6;
+  --color-brand-pink: #EC4899;
+  --color-brand-yellow: #FCD34D;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply text-gray-900;
+  }
+}
+
+@layer components {
+  /* Gradient background for welcome screen */
+  .bg-gradient-welcome {
+    background: linear-gradient(
+      135deg,
+      #c4b5fd 0%,
+      #f9a8d4 40%,
+      #fde68a 100%
+    );
+  }
+
+  /* Soft card styles */
+  .card-soft {
+    @apply bg-white rounded-3xl p-6 transition-all duration-200;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .card-soft:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Category card colors */
+  .card-category-blue {
+    @apply bg-blue-50 border border-blue-100;
+  }
+
+  .card-category-mint {
+    @apply bg-emerald-50 border border-emerald-100;
+  }
+
+  .card-category-purple {
+    @apply bg-violet-50 border border-violet-100;
+  }
+
+  .card-category-peach {
+    @apply bg-orange-50 border border-orange-100;
+  }
+
+  /* Primary button style */
+  .btn-primary {
+    @apply text-white font-semibold py-4 px-8 rounded-full transition-all duration-200;
+    background-color: var(--color-brand-purple);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .btn-primary:hover {
+    @apply bg-violet-600;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.95);
+  }
+
+  /* Ghost button */
+  .btn-ghost {
+    @apply text-gray-500 rounded-xl p-2 transition-colors duration-150;
+  }
+
+  .btn-ghost:hover {
+    @apply text-gray-700 bg-gray-100;
+  }
+
+  /* Task checkbox */
+  .task-checkbox {
+    @apply w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center cursor-pointer transition-colors duration-150;
+  }
+
+  .task-checkbox:hover {
+    border-color: var(--color-brand-purple);
+  }
+
+  .task-checkbox.checked {
+    background-color: var(--color-brand-purple);
+    border-color: var(--color-brand-purple);
+  }
+
+  /* Input styles */
+  .input-modern {
+    @apply w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-2xl transition-all duration-200;
+  }
+
+  .input-modern:focus {
+    @apply outline-none border-violet-500;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+  }
+
+  .input-modern::placeholder {
+    @apply text-gray-400;
+  }
+
+  /* Avatar */
+  .avatar {
+    @apply w-12 h-12 rounded-full flex items-center justify-center text-white font-semibold;
+    background: linear-gradient(135deg, var(--color-brand-purple), var(--color-brand-pink));
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+}
+
+@layer utilities {
+  /* Safe area padding for mobile */
+  .safe-bottom {
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
+
+  /* Brand colors as utilities */
+  .bg-brand-purple {
+    background-color: var(--color-brand-purple);
+  }
+
+  .text-brand-purple {
+    color: var(--color-brand-purple);
+  }
+
+  .border-brand-purple {
+    border-color: var(--color-brand-purple);
+  }
+
+  .bg-brand-pink {
+    background-color: var(--color-brand-pink);
+  }
+
+  .text-brand-pink {
+    color: var(--color-brand-pink);
+  }
+
+  .bg-brand-yellow {
+    background-color: var(--color-brand-yellow);
+  }
+
+  .text-brand-yellow {
+    color: var(--color-brand-yellow);
+  }
+
+  /* Shadow utilities */
+  .shadow-soft {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .shadow-card {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+}
