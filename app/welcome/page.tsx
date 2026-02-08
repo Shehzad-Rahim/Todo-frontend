@@ -11,7 +11,8 @@ export default function WelcomePage() {
 
   useEffect(() => {
     // Redirect unauthenticated users to login
-    if (!isPending && !session?.user) {
+    if(isPending) return;
+    if (!session?.user) {
       router.replace("/login");
     }
   }, [session, isPending, router]);
