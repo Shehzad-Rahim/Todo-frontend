@@ -37,13 +37,13 @@
 //   matcher: ["/tasks/:path*", "/login", "/signup"],
 // };
 
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+// import { NextResponse } from "next/server";
+// import type { NextRequest } from "next/server";
 
-export function middleware(_: NextRequest) {
-  return NextResponse.next();
-}
+// export function middleware(_: NextRequest) {
+//   return NextResponse.next();
+// }
 
-export const config = {
-  matcher: ["/tasks/:path*", "/login", "/signup"],
-};
+// export const config = {
+//   matcher: ["/tasks/:path*", "/login", "/signup"],
+// };
